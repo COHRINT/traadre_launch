@@ -1,0 +1,14 @@
+<launch>
+  <!-- Launch the Unity emulator and a joystick node for it -->
+    <arg name="debug" value="false"/>
+    
+    <arg name="launch_prefix" if="$(arg debug)" default="gdb -ex run --args"/>
+    <arg name="launch_prefix" unless="$(arg debug)" default=""/>
+    
+
+    <node pkg="fake_unity" type="FakeUnity.py" name="fake_unity" output="screen">
+    </node>
+
+    <node pkg="joy" type="joy_node" name="unity_joy" output="screen">
+    </node>
+</launch>
