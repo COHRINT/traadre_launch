@@ -7,7 +7,6 @@ project(traadre_launch)
 find_package(catkin REQUIRED COMPONENTS
   policy_server
   rqt_traadre_ground
-  traadre_msgs
 )
 
 ## System dependencies are found with CMake's conventions
