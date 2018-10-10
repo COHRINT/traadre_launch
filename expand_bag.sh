@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/bin/bash
 for fullfile in *.bag; do
     filename=$(basename "$fullfile")
     extension="${filename##*.}"
